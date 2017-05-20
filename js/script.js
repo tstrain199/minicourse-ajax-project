@@ -27,7 +27,7 @@ function loadData() {
 
     // YOUR CODE GOES HERE!
     //var items = [];
-    var nyt_url = "httprs://api.nytimes.com/svc/search/v2/articlesearch.json";
+    var nyt_url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
     nyt_url += '?' + $.param({
       'api-key': "751ec68137734ff0a09da10dafe1be06",
       'q': address
