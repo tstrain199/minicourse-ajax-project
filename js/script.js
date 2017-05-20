@@ -20,7 +20,7 @@ function loadData() {
     var apiKey = 'AIzaSyBLZUDNLNjSZ-i9qn22ZTfvp-KEmgMO2Ag';
     var urlStr = googleStr.concat(streetStr,',',cityStr,'&key=',apiKey);
     console.log(urlStr);
-    $( '.nytimes-container' ).append( '<img class="bgimg" src="'+urlStr+'">');
+    $('.nytimes-container').append('<img class="bgimg" src="'+urlStr+'">');
     return false;
 };
 
