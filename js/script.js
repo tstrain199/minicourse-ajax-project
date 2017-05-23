@@ -32,7 +32,7 @@ function loadData() {
       'q': address
     });
 
-    // debugger;
+    debugger;
     $.getJSON(nyt_url, function(data) {
         for (doc in data.response.docs) {
           //console.log(data.response.docs[doc].headline.main);
@@ -50,19 +50,22 @@ function loadData() {
 
     // load wikipedia-links
     var wiki_url = "https://en.wikipedia.org/w/api.php";
-    wiki_url += '?' + $.param({
-      'action': "opensearch",
-      'search': cityStr,
-      'format': "json"
-    });
-    console.log(wiki_url);
 
+debugger;
     $.ajax({
       url: wiki_url,
-      dataType: json,
-      success: wikiparse,
+      data: {
+        action: "opensearch",
+        search: cityStr,
+        format: "json"
+      },
+      dataType: "jsonp",
+      success: function(data) {
+      console.log(data);
+      console.log(data[3].[2]);
+      }
     });
-    function wikiparse
+
 
         return false;
     };
